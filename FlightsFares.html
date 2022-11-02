@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="common.css" />
+      <title>Flights and Fares</title>
+</head>
+
+<body>
+
+      <!--Main Container div-->
+      <div id="mainContainer">
+
+            <div id="banner">
+                  <img src="images/Banner.gif" alt="Scottish Airways" />
+                  <ul class="nav">
+                        <li class="nav"><a href="Home.html">Home</a></li>
+                        <li class="nav"><a href="Destinations.html">Destinations</a></li>
+                        <li id="chosen"><a href="FlightsFares.html">Flights &amp; Fares</a></li>
+                        <li class="nav"><a href="Experience.html">Experience</a></li>
+                        <li class="nav"><a href="MyAccount.html">My Account</a></li>
+                        <li class="nav"><a href="ContactUs.html">Contact Us</a></li>
+                  </ul>
+            </div>
+
+            <!--content container-->
+            <div class="content">
+                  <div class="heading">Search For Flights</div>
+                  <div id="bookingForm">
+                        <form action="http://www.macs.hw.ac.uk/cgi-bin/ips/echo" method="post"
+                              onsubmit="return validateDate()">
+                              <p>
+                                    Country of departure:<br /><select class="airportSelect" name="country">
+                                          <option> Scotland</option>
+                                          <option> England</option>
+                                          <option> Wales</option>
+                                          <option> Ireland</option>
+                                    </select></p>
+                              <p>From: <br /><select class="airportSelect" name="fromAirport">
+                                          <option> Edinburgh</option>
+                                          <option> Glasgow</option>
+                                          <option> Aberdeen</option>
+                                          <option> Dundee</option>
+                                    </select></p>
+                              <p>To: <br /><select class="airportSelect" name="toAirport">
+                                          <option> Spain</option>
+                                          <option> England</option>
+                                          <option> France</option>
+                                          <option> Italy</option>
+                                    </select></p>
+                              <p>Departure: <br />
+                                    <input type="text" id="dep" name="departDate" value="DD/MM/YYYY"
+                                          onclick="clearBox('dep')" size="11" />
+                                    <input type="checkbox" id="cbox" name="oneWay" onclick="noRetDate()" />One Way Only
+                              </p>
+                              <p>Return: <br />
+                                    <input type="text" id="ret" name="returnDate" value="DD/MM/YYYY"
+                                          onclick="clearBox('ret')" size="11" />
+                              </p>
+                              <p>Flight class: <img src="images/info.gif" alt="Flight class info"
+                                          title="Flight class info" onclick="openClassInfo()" />
+                                    <select name="flightClass" id="flightClass">
+                                          <option>Economy</option>
+                                          <option>Business</option>
+                                          <option>First</option>
+                                    </select>
+                              </p>
+                              <p>Tickets: <img src="images/info.gif" alt="Tickets info" title="Tickets info"
+                                          onclick="openTicketInfo()" />
+                                    <br />Adults: <select name="adultTickets">
+                                          <option>1</option>
+                                          <option>2</option>
+                                          <option>3</option>
+                                          <option>4</option>
+                                          <option>5</option>
+                                          <option>6</option>
+                                          <option>7</option>
+                                          <option>8</option>
+                                          <option>9</option>
+                                    </select>
+                                    Children: <select name="childTickets">
+                                          <option>0</option>
+                                          <option>1</option>
+                                          <option>2</option>
+                                          <option>3</option>
+                                          <option>4</option>
+                                          <option>5</option>
+                                          <option>6</option>
+                                          <option>7</option>
+                                          <option>8</option>
+                                    </select>
+                                    Infants: <select name="infantTickets">
+                                          <option>0</option>
+                                          <option>1</option>
+                                          <option>2</option>
+                                          <option>3</option>
+                                          <option>4</option>
+                                          <option>5</option>
+                                          <option>6</option>
+                                          <option>7</option>
+                                          <option>8</option>
+                                    </select>
+                              </p>
+                              <p id="getFlights">
+                                    <input type="submit" value="Get Flights" />
+                              </p>
+                        </form>
+                  </div>
+                  <div id="airplane">
+                        <p class="smlHeading">Choose your Flight class</p>
+                        <img src="images/seatmap.gif" id="planeClass" width="100%" height="250" alt="Planets"
+                              usemap="#planetmap" />
+
+                        <map name="planetmap" id="planemap">
+                              <area shape="rect" coords="108,82,225,198" onmouseover="writeText('&lt;h4&gt;First Class&lt;/h4&gt; For those who wish to experience luxury and fly in style.');
+                        changeMap('images/seatmapFirst.gif');" onclick="changeClass('First');" title="First Class"
+                                    alt="First Class" />
+                              <area shape="rect" coords="235,82,401,198" onmouseover="writeText('&lt;h4&gt;Business Class&lt;/h4&gt; For those who wish a more comfortable and luxurious flight than Economy.');
+                        changeMap('images/seatmapBus.gif');" onclick="changeClass('Business');" title="Business Class"
+                                    alt="Business Class" />
+                              <area shape="rect" coords="408,82,589,198" onmouseover="writeText('&lt;h4&gt;Economy Class&lt;/h4&gt; For those who are on a budget and not interested in extra comforts.');
+                        changeMap('images/seatmapEco.gif');" onclick="changeClass('Economy');" title="Economy Class"
+                                    alt="Economy Class" />
+                        </map>
+
+                        <p id="desc"></p>
+                  </div>
+            </div>
+
+            <div class="content">
+                  <div class="heading3">Departure Flights</div>
+                  <div class="heading3">Return Flights</div>
+                  <div class="flights" id="departs">
+                        <br />
+                        <p class="noFlights">Sorry, no flights have been found.</p><br />
+                  </div>
+                  <div class="flights" id="returns">
+                        <br />
+                        <p class="noFlights">Sorry, no flights have been found.</p><br />
+                  </div>
+            </div>
+
+      </div>
+      <!--End of Main Container div-->
+      <script type="text/javascript" src="bookingForm.js"></script>
+</body>
+
+</html>

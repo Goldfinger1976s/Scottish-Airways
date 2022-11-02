@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="common.css" />
+      <title>Scottish Airways</title>
+</head>
+
+<body>
+
+      <!--Main Container div-->
+      <div id="mainContainer">
+
+            <div id="banner">
+                  <img src="images/Banner.gif" alt="Scottish Airways" />
+                  <ul class="nav">
+                        <li id="chosen"><a href="Home.html">Home</a></li>
+                        <li class="nav"><a href="Destinations.html">Destinations</a></li>
+                        <li class="nav"><a href="FlightsFares.html">Flights &amp; Fares</a></li>
+                        <li class="nav"><a href="Experience.html">Experience</a></li>
+                        <li class="nav"><a href="MyAccount.html">My Account</a></li>
+                        <li class="nav"><a href="ContactUs.html">Contact Us</a></li>
+                  </ul>
+            </div>
+
+            <!--content1 container-->
+            <div class="content">
+                  <div class="heading">Quick Flight check</div>
+                  <div id="bookingForm">
+                        <form action="http://www.macs.hw.ac.uk/cgi-bin/ips/echo" method="post"
+                              onsubmit="return validateDate()">
+                              <p>
+                                    Country of departure:<br /><select class="airportSelect" name="country">
+                                          <option> Scotland</option>
+                                          <option> England</option>
+                                          <option> Wales</option>
+                                          <option> Ireland</option>
+                                    </select></p>
+                              <p>From: <br /><select class="airportSelect" name="fromAirport">
+                                          <option> Edinburgh</option>
+                                          <option> Glasgow</option>
+                                          <option> Aberdeen</option>
+                                          <option> Dundee</option>
+                                    </select></p>
+                              <p>To: <br /><select class="airportSelect" name="toAirport">
+                                          <option> Spain</option>
+                                          <option> England</option>
+                                          <option> France</option>
+                                          <option> Italy</option>
+                                    </select></p>
+                              <p>Departure: <br />
+                                    <input type="text" id="dep" name="departDate" value="DD/MM/YYYY"
+                                          onclick="clearBox('dep')" size="11" />
+                                    <input type="checkbox" id="cbox" name="oneWay" onclick="noRetDate()" />One Way Only
+                              </p>
+                              <p>Return: <br />
+                                    <input type="text" id="ret" name="returnDate" value="DD/MM/YYYY"
+                                          onclick="clearBox('ret')" size="11" />
+                              </p>
+                              <p>Flight class: <img src="images/info.gif" alt="Flight class info"
+                                          title="Flight class info" onclick="openClassInfo()" />
+                                    <select name="flightClass">
+                                          <option>Economy</option>
+                                          <option>Business</option>
+                                          <option>First</option>
+                                    </select>
+                              </p>
+                              <p>Tickets: <img src="images/info.gif" alt="Tickets info" title="Tickets info"
+                                          onclick="openTicketInfo()" /><br />
+                                    Adults: <select name="adultTickets">
+                                          <option>1</option>
+                                          <option>2</option>
+                                          <option>3</option>
+                                          <option>4</option>
+                                          <option>5</option>
+                                          <option>6</option>
+                                          <option>7</option>
+                                          <option>8</option>
+                                          <option>9</option>
+                                    </select>
+                                    Children: <select name="childTickets">
+                                          <option>0</option>
+                                          <option>1</option>
+                                          <option>2</option>
+                                          <option>3</option>
+                                          <option>4</option>
+                                          <option>5</option>
+                                          <option>6</option>
+                                          <option>7</option>
+                                          <option>8</option>
+                                    </select>
+                                    Infants: <select name="infantTickets">
+                                          <option>0</option>
+                                          <option>1</option>
+                                          <option>2</option>
+                                          <option>3</option>
+                                          <option>4</option>
+                                          <option>5</option>
+                                          <option>6</option>
+                                          <option>7</option>
+                                          <option>8</option>
+                                    </select>
+                              </p>
+                              <p class="getFlights">
+                                    <input type="submit" value="Get Flights" />
+                              </p>
+                        </form>
+                  </div>
+                  <div id="welcome">
+                        <p class="smlHeading">Welcome to the Scottish Airways website.</p>
+                        <p>
+                              Scottish Airways is Scotland's premium airline, currently providing both
+                              affordable and luxury flights to all over Europe. New flight paths and
+                              destinations are being added continuously so check our destinations
+                              section frequently.</p>
+                        <p>Please explore our website for all the information you need on our
+                              different flight packages, destinations, etc. Also keep an eye out for
+                              exclusive online deals.</p>
+                  </div>
+                  <div id="offer"><a href="FlightsFares.html">
+                              <img src="images/onlineOffer1.gif" alt="Infants go free!" title="Infants go free!" /></a>
+                  </div>
+            </div>
+
+      </div>
+      <!--End of Main Container div-->
+
+</body>
+<script type="text/javascript" src="bookingForm.js"></script>
+
+</html>

@@ -1,0 +1,25 @@
+/* infopopup css */
+
+.container{
+  font-family: Arial;
+}
+#header {
+  background-color: blue;
+  color: white;
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+h3,
+h4 {
+  color: blue;
+}
+
+.validate img {
+  margin-top: 10px;
+  border: 0;
+  width: 88px;
+  height: 31px;
+}

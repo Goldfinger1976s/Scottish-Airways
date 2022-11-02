@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" type="text/css" href="common.css" />
+     <title>Contact Us</title>
+</head>
+
+<body>
+
+     <!--Main Container div-->
+     <div id="mainContainer">
+
+          <div id="banner">
+               <img src="images/Banner.gif" alt="Scottish Airways" />
+               <ul class="nav">
+                    <li class="nav"><a href="Home.html">Home</a></li>
+                    <li class="nav"><a href="Destinations.html">Destinations</a></li>
+                    <li class="nav"><a href="FlightsFares.html">Flights &amp; Fares</a></li>
+                    <li class="nav"><a href="Experience.html">Experience</a></li>
+                    <li class="nav"><a href="MyAccount.html">My Account</a></li>
+                    <li id="chosen"><a href="ContactUs.html">Contact Us</a></li>
+               </ul>
+          </div>
+
+          <!--content container-->
+          <div class="content">
+               <div class="heading2">Scottish Airways Contact Info</div>
+               <div id="contacts">
+                    Our main office is situated at:
+                    <p class="address">Heriot-Watt University,<br />Riccarton,<br />Edinburgh,<br />
+                         Scotland.</p>
+                    <p>You can phone our helpline on 0123 456 7890. This helpline is available during
+                         normal working hours and costs &pound;4 per minute from a BT landline. Mobile costs
+                         may vary considerably.</p>
+                    <p>You can also submit any questions or comments you have using the email facility
+                         opposite. A member of our team will get back to you as soon as possible.</p>
+                    <p>If you are interested in a career or internship with Scottish Airways then
+                         please send your CV and covering letter to
+                         <a href="mailto:f@foo.com">HR@ScottishAirways.com</a>
+                    </p>
+               </div>
+               <div id="mailBox">
+                    <p class="smlHeading">Email us your Questions</p>
+                    <form action="mailto:f@foo.com" method="post" onsubmit="return validateForm()">
+                         <div id="mailLeft">
+                              <p>Subject:</p>
+                              <p>From:</p>
+                              <p>Message:</p>
+                         </div>
+                         <div id="mailRight">
+                              <p><input type="text" name="subject" id="sub" /></p>
+                              <p><input type="text" name="from" id="from" /></p>
+                              <p><textarea name="message" id="msg" rows="10" cols="10"></textarea></p>
+                         </div>
+                         <p id="getFlights"><input type="submit" value="Submit" /></p>
+                    </form>
+               </div>
+          </div>
+
+
+
+     </div>
+     <!--End of Main Container div-->
+     <script type="text/javascript" src="bookingForm.js"></script>
+</body>
+
+</html>

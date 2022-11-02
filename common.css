@@ -1,0 +1,431 @@
+/*Common CSS Sheet*/
+
+/*Main body*/
+body {
+  background-color: #000033;
+  background-image: url("images/blueSky.jpg");
+  background-attachment: fixed;
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/*Main Container division*/
+#mainContainer {
+  width: 930px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  border: 0;
+}
+
+/*Banner division*/
+#banner {
+  width: 100%;
+  background: url("images/airplane4.jpg") 0px -350px;
+  background-repeat: no-repeat;
+}
+
+/*Start of navigation style*/
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li.nav {
+  float: left;
+}
+
+li.nav a:link,
+li.nav a:visited {
+  display: block;
+  width: 155px;
+  font-size: 100%;
+  color: yellow;
+  background-image: url("images/navbar2.gif");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 8px 0px 5px 0px;
+  text-decoration: none;
+}
+
+li.nav a:hover,
+li.nav a:active {
+  background-image: url("images/navbar3.gif");
+  font-weight: bold;
+  color: #ffffff;
+}
+
+#chosen {
+  display: block;
+  width: 155px;
+  font-size: 100%;
+  font-weight: bold;
+  background-image: url("images/navbar3.gif");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 8px 0px 5px 0px;
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  float: left;
+}
+
+#chosen a {
+  text-decoration: none;
+  display: block;
+  color: #ffffff;
+}
+
+/*End of navigation style*/
+
+/*Generic content division*/
+.content {
+  position: relative;
+  width: 100%;
+  margin-top: 5px;
+}
+
+/*****Start of Overview Page*****/
+#headingOverview {
+  background-color: blue;
+  border: 1px solid blue;
+  font-weight: bold;
+  color: white;
+  padding: 7px;
+  text-align: center;
+}
+
+#overview {
+  background-color: #c6d2f6;
+  position: relative;
+  padding: 1px 7px;
+  border: 1px solid blue;
+}
+
+#overview a:link {
+  color: blue;
+}
+#overview a:visited,
+#overview a:hover,
+#overview a:active {
+  color: #990000;
+}
+#overview a:hover {
+  text-decoration: none;
+}
+
+.bold {
+  font-weight: bold;
+}
+/*****End of Overview Page*****/
+
+/*****Start of Home Page*****/
+/*Booking Form div*/
+#bookingForm {
+  background-color: #c6d2f6;
+  position: relative;
+  padding: 1px 7px;
+  width: 29%;
+  font-size: 80%;
+  border: 1px solid blue;
+}
+
+.heading {
+  background-color: blue;
+  border: 1px solid blue;
+  font-weight: bold;
+  color: white;
+  width: 29%;
+  padding: 7px;
+  text-align: center;
+}
+
+#bookingForm img {
+  cursor: pointer;
+}
+
+.airportSelect {
+  width: 70%;
+}
+
+.getFlights {
+  text-align: center;
+  clear: both;
+}
+.getFlights input {
+  background-color: red;
+  color: white;
+}
+.getFlights input:hover {
+  background-color: white;
+  color: red;
+  cursor: pointer;
+}
+
+/*Welcome div*/
+#welcome {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 1px 7px;
+  width: 67%;
+  height: 50%;
+  background-color: #c6d2f6;
+  border: 1px solid blue;
+}
+
+.smlHeading {
+  font-weight: bold;
+  font-size: 110%;
+  text-align: center;
+}
+
+/*Offer div*/
+#offer {
+  position: absolute;
+  right: 0px;
+  top: 58%;
+  width: 68.4%;
+  background-image: url("images/offerBgd.jpg");
+  border: 1px solid blue;
+}
+
+#offer img {
+  border-style: none;
+  width: 100%;
+  height: 100%;
+}
+/*****End of Home Page*****/
+
+/*****Start of Contact Us Page*****/
+/*Contacts div*/
+#contacts {
+  background-color: #c6d2f6;
+  position: relative;
+  padding: 1px 7px;
+  width: 46%;
+  font-size: 100%;
+  border: 1px solid blue;
+}
+
+.heading2 {
+  background-color: blue;
+  border: 1px solid blue;
+  font-weight: bold;
+  color: white;
+  width: 46%;
+  padding: 7px;
+  text-align: center;
+}
+
+.address {
+  margin-left: 30%;
+  font-style: italic;
+}
+
+/*Mailto div*/
+#mailBox {
+  position: absolute;
+  padding: 1px 7px;
+  right: 0px;
+  top: 0px;
+  width: 50%;
+  height: 99%;
+  background-color: #c6d2f6;
+  border: 1px solid blue;
+}
+
+#mailLeft {
+  position: relative;
+  width: 20%;
+  float: left;
+}
+#mailRight {
+  position: relative;
+  font-size: 90%;
+  width: 75%;
+  float: left;
+}
+#mailRight input,
+#mailRight textarea {
+  width: 100%;
+}
+/*****End of Contact Us Page*****/
+
+/*****Start of FlightsFares Page*****/
+/*Search Flights div*/
+#searchFlights img {
+  cursor: pointer;
+}
+
+/*Airplane Map div*/
+#airplane {
+  background-color: #c6d2f6;
+  position: absolute;
+  padding: 1px 7px;
+  top: 0;
+  right: 0;
+  width: 67%;
+  height: 99%;
+  border: 1px solid blue;
+}
+
+#airplane img {
+  width: 100%;
+}
+
+#desc {
+  text-align: center;
+}
+
+#planemap area {
+  cursor: pointer;
+}
+
+/*Flights div*/
+.heading3 {
+  background-color: blue;
+  border: 1px solid blue;
+  font-weight: bold;
+  float: left;
+  color: white;
+  width: 48.25%;
+  padding: 7px;
+  font-size: 90%;
+}
+
+.flights {
+  position: relative;
+  width: 48.25%;
+  float: left;
+  background-color: #c6d2f6;
+  padding: 1px 7px;
+  border: 1px solid blue;
+}
+
+.noFlights {
+  text-align: center;
+}
+
+/*****End of FlightsFares Page*****/
+
+/***********************************************************/
+
+/*Experience div*/
+.slideshow {
+  position: relative;
+  width: 48.5%;
+  background-color: blue;
+  border: 1px solid blue;
+}
+
+/*Experience div*/
+.textbox {
+  top: 0;
+  right: 0;
+  height: 100%;
+  position: absolute;
+  width: 50%;
+  background-color: #c6d2f6;
+  border: 1px solid blue;
+}
+/*End of Experince Page*/
+
+/*MyAccount div*/
+#register {
+  position: relative;
+  padding: 1px 7px;
+  width: 55%;
+  height: 80%;
+  background-color: #c6d2f6;
+  border: 1px solid blue;
+}
+
+/*MyAccount div*/
+#sign {
+  background-color: #c6d2f6;
+  position: absolute;
+  padding: 1px 7px;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 50%;
+  font-size: 100%;
+  border: 1px solid blue;
+}
+
+.regLeft {
+  position: relative;
+  width: 20%;
+  float: left;
+}
+.regright {
+  position: relative;
+  font-size: 100%;
+  width: 75%;
+  float: right;
+}
+.regright input,
+#regRight textarea {
+  width: 60%;
+}
+
+.headinga {
+  background-color: blue;
+  border: 1px solid blue;
+  font-weight: bold;
+  color: white;
+  width: 55%;
+  padding: 7px;
+  text-align: center;
+}
+/*End of MyAccount Page*/
+
+/*Destination*/
+.fareTable {
+  position: relative;
+  padding: 1px 7px;
+  width: 100%;
+  height: 80%;
+  background-color: #c6d2f6;
+  border: 1px solid blue;
+}
+
+/*Destination*/
+table,
+td,
+th {
+  border: 1px solid blue;
+}
+th {
+  background-color: blue;
+  color: white;
+}
+
+.maintable {
+  position: relative;
+  padding: 1px 7px;
+  width: 99%;
+  height: 80%;
+  background-color: #c6d2f6;
+  border: 1px solid blue;
+}
+.row1 {
+  width: 30%;
+}
+.row2 {
+  width: 30%;
+}
+.row3 {
+  width: 59%;
+}
+
+/***********************************************************/
+

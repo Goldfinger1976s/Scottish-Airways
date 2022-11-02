@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" type="text/css" href="common.css" />
+     <title>My Account</title>
+</head>
+
+<body>
+
+     <!--Main Container div-->
+     <div id="mainContainer">
+
+          <div id="banner">
+               <img src="images/Banner.gif" alt="Scottish Airways" />
+               <ul class="nav">
+                    <li class="nav"><a href="Home.html">Home</a></li>
+                    <li class="nav"><a href="Destinations.html">Destinations</a></li>
+                    <li class="nav"><a href="FlightsFares.html">Flights &amp; Fares</a></li>
+                    <li class="nav"><a href="Experience.html">Experience</a></li>
+                    <li id="chosen"><a href="MyAccount.html">My Account</a></li>
+                    <li class="nav"><a href="ContactUs.html">Contact Us</a></li>
+               </ul>
+          </div>
+
+          <!--content container-->
+          <div class="content">
+               <div class="headinga">Register</div>
+               <div id="register">
+
+                    <form action="http://www.macs.hw.ac.uk/cgi-bin/ips/echo" method="post"
+                         onsubmit="return validateReg()">
+                         <div class="regLeft">
+                              <p>Title:</p>
+                              <p>First name:</p>
+                              <p>Family name:</p>
+                              <p>Email address:</p>
+                              <p>Confirm email:</p>
+                              <p>Password:</p>
+                              <p>Confirm pass:</p>
+                              <p>Country:</p>
+                              <p>Language:</p>
+                         </div>
+                         <div class="regright">
+                              <br />
+                              <select name="title">
+                                   <option value="mr" selected="selected">Mr</option>
+                                   <option value="mrs">Mrs</option>
+                                   <option value="ms">Ms</option>
+                                   <option value="dr">Dr</option>
+                              </select>
+                              <p><input type="text" name="firstname" id="fir" /></p>
+                              <p><input type="text" name="familyname" id="fam" /></p>
+                              <p><input type="text" name="email" id="from" /></p>
+                              <p><input type="text" name="confirmemail" id="from1" /></p>
+                              <p><input type="password" name="password" id="pass" /></p>
+                              <p><input type="password" name="confirmpassword" id="pass2" /></p>
+                              <select name="Country">
+                                   <option value="Scotland" selected="selected">Scotland</option>
+                                   <option value="England">England</option>
+                                   <option value="Wales">Wales</option>
+                                   <option value="Ireland">Ireland</option>
+                              </select>
+                              <br />
+                              <br />
+                              <select name="language">
+                                   <option value="English" selected="selected">English</option>
+                                   <option value="Gaelic">Gaelic</option>
+                                   <option value="Scots">Scots</option>
+                              </select>
+                         </div>
+
+                         <p class="getFlights"><input type="submit" value="Submit" /></p>
+                    </form>
+               </div>
+
+
+               <div id="sign">
+                    <p class="smlHeading">Sign in</p>
+                    <form action="http://www.macs.hw.ac.uk/cgi-bin/ips/echo" method="post"
+                         onsubmit="return validateSign()">
+                         <div class="regLeft">
+                              <p>Username:</p>
+                              <p>Password:</p>
+                         </div>
+                         <div class="regright">
+                              <p><input type="text" name="firstname" id="use" /></p>
+                              <p><input type="password" name="password2" id="ssap" /></p>
+                         </div>
+                         <p></p>
+                         <p class="getFlights"><input type="submit" value="Submit" /></p>
+                    </form>
+               </div>
+          </div>
+
+     </div>
+     <!--End of Main Container div-->
+     <script src="./bookingForm.js"></script>
+</body>
+
+</html>
